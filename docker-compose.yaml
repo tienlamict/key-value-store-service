@@ -1,0 +1,9 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - "5050:5050"
+  client:
+    build: ./client
+    depends_on:
+      - server
